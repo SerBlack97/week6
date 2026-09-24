@@ -1,4 +1,4 @@
-function mathSum (num2){
+function mathSum (){
     console.log(num)
     const sum = Number(document.getElementById("number1").value) + Number(document.getElementById("number2").value);
     return sum;
@@ -6,13 +6,30 @@ function mathSum (num2){
 
 console.log(mathSum());
 
-function mathSub (num3){
+function mathSub (){
     console.log(num)
     const sum = Number(document.getElementById("number1").value) - Number(document.getElementById("number2").value);
     return sum;
 }
 
 console.log(mathSub());
+
+function mathMul (){
+    console.log(num)
+    const sum = Number(document.getElementById("number1").value) - Number(document.getElementById("number2").value);
+    return sum;
+}
+
+console.log(mathMul());
+
+function mathDivi (){
+    console.log(num)
+    const sum = Number(document.getElementById("number1").value) - Number(document.getElementById("number2").value);
+    return sum;
+}
+
+console.log(mathDivi());
+
 
 document.querySelector("button").addEventListener("click", function() {document.querySelector("#special").innerHTML=mathSum();
 })
