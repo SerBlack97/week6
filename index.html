@@ -6,14 +6,12 @@
     <title>week6</title>
 </head>
 <body>
-    <div class="box"></div>
-    <div id="special"></div>
-
     <input id="number1" type="text"/>
    
-    <label for="operation">Operation:</label>
-    <select name="operation" id="operation">
-        <option value="add">+</option>
+    <label>Operation:</label>
+
+    <select id="operation" onchange="calculate(this.value)">
+        <option value="add">    +</option>
         <option value="subtract">-</option>
         <option value="multiply">*</option>
         <option value="divide">/</option>
@@ -21,9 +19,9 @@
 
     <input id="number2" type="text"/>
 
-    <button id="calculate">Calculate</button>
+    <button onclick="calculate()">Calculate</button>
 
-    <p>Result: <span id="output">0</span></p>
+    <div id="result">Result:</div>
 
     <script src="js/apps.js"></script>
 </body>
