@@ -8,9 +8,9 @@
 <body>
     <div class="box"></div>
     <div id="special"></div>
+
     <input id="number1" type="text"/>
    
-
     <label for="operation">Operation:</label>
     <select name="operation" id="operation">
         <option value="add">+</option>
@@ -19,9 +19,12 @@
         <option value="divide">/</option>
     </select>
 
-     <input id="number2" type="text"/>
+    <input id="number2" type="text"/>
 
-    <button id="output">Calculate</button>
-    
+    <button id="calculate">Calculate</button>
+
+    <p>Result: <span id="output">0</span></p>
+
+    <script src="js/apps.js"></script>
 </body>
 </html>
