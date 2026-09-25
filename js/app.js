@@ -1,67 +1,39 @@
 function calculate() {
-
-    const results = document.getElementById("result");
+  
+    const resultDiv = document.getElementById("result");
     const math = document.getElementById("operation");
-
+    
+    const operation = math.value; 
+    // user inputs converted into integers 
     const fnumber = parseFloat(document.getElementById("number1").value);
     const snumber = parseFloat(document.getElementById("number2").value);
-
+    // initialize starting number
+    let total = 0; 
+    //functions
     switch(operation) {
-    case "add":
-      results = fnumber + snumber;
-      resultDiv.innerHTML = `Result: ${fnumber} + ${snumber} = ${results}`;
-      break;
-    case "subtract":
-      results = fnumber - snumber;
-      resultDiv.innerHTML = `Result: ${fnumber} - ${snumber} = ${results}`;
-      break;
-    case "multiply":
-      results = fnumber * snumber;
-      resultDiv.innerHTML = `Result: ${fnumber} * ${snumber} = ${results}`;
-      break;
-    case "divide":
-      if (snumber === 0) {
-        resultDiv.innerHTML = "Error";
-      } else {
-        results = fnumber / snumber;
-        resultDiv.innerHTML = `Result: ${fnumber} / ${snumber} = ${results}`;
-      }
-      break;
+        case "add":
+            total = fnumber + snumber;
+            resultDiv.innerHTML = `Result:${total}`;
+            break;
+        case "subtract":
+            total = fnumber - snumber;
+            resultDiv.innerHTML = `Result:${total}`;
+            break;
+        case "multiply":
+            total = fnumber * snumber;
+            resultDiv.innerHTML = `Result:${total}`;
+            break;
+        case "divide":
+            if (snumber == 0) {
+                resultDiv.innerHTML = "Result: Error";
+            } 
+            else {
+                total = fnumber / snumber;
+                resultDiv.innerHTML = `Result:${total}`;
+            }
+            break;
+    }
 }
-}
-
-// function mathSum (){
-//     console.log(num)
-//     const sum = Number(document.getElementById("number1").value) + Number(document.getElementById("number2").value);
-//     return sum;
-// }
-
-// console.log(mathSum());
-
-// function mathSub (){
-//     console.log(num)
-//     const sum = Number(document.getElementById("number1").value) - Number(document.getElementById("number2").value);
-//     return sum;
-// }
-
-// console.log(mathSub());
-
-// function mathMul (){
-//     console.log(num)
-//     const sum = Number(document.getElementById("number1").value) - Number(document.getElementById("number2").value);
-//     return sum;
-// }
-
-// console.log(mathMul());
-
-// function mathDivi (){
-//     console.log(num)
-//     const sum = Number(document.getElementById("number1").value) - Number(document.getElementById("number2").value);
-//     return sum;
-// }
-
-// console.log(mathDivi());
-
-
-// document.querySelector("output").addEventListener("click", function() {document.querySelector("#special").innerHTML=mathSum();
-// })
+// runs function on button click
+const calc = document.getElementById("calcbutton");
+calc.addEventListener("click", calculate);
